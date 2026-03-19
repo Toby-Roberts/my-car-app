@@ -32,3 +32,12 @@ def car_card(car):
         """,
         unsafe_allow_html=True
     )
+
+
+def swap_button(car, index):
+    """
+    Renders a garage card with a swap button below.
+    Shown when the player is in swap mode picking which car to replace.
+    """
+    car_card(car)
+    return st.button("Swap out", key=f"swap_{index}")

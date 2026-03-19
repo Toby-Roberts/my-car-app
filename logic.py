@@ -30,3 +30,12 @@ def display_garage(garage):
 def reset_garage():
     """Reset the garage to an empty state."""
     return []
+
+def swap_car(garage, index, new_car):
+    """Swap a car in the garage with a new car."""
+    copy = garage.copy()
+    if 0 <= index < len(copy):
+        copy[index] = new_car
+    else:
+        raise IndexError("Invalid garage slot index.")
+    return copy
